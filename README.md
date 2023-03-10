@@ -13,4 +13,5 @@ The patient detail form: acute team info
 The patient detail form: community team info
 
 ![DWD app notifications](https://user-images.githubusercontent.com/56914706/224286233-97fafd20-2387-44d7-ad9f-decf34eb5daa.jpg)
+
 Various notifications sent to the Teams channel for the district
