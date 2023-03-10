@@ -16,4 +16,4 @@ The patient detail form: community team info
 
 Various notifications sent to the Teams channel for the district
 
-See [Installation Instructions](install.md)
+See [Installation Instructions](/install.md)
