@@ -47,10 +47,14 @@ List Screen:
 - List_topbar container has icons that change the sorting variables with OnSelect. The Icon parameter also changes based on the sorting variables. The width of the icons are based on the width of the header titles in the container below. The New Patient button simply navigates to the newpatient screen OnSelect.
 - List_header container is mostly headings with Width params set to the same fractions of the parent.width as their data items in the list_container below. The District drop down has an important script in the OnChange param which filters the patientlist gallery and sets the user preferences for district, hospital, and ward based on the current selections.
 - List_container just contains the patientlist gallery. Its Items param has the important sort and filter script which uses the three drop downs and varNextAction to filter the list. If varNextAction = 1 and atBat = true, the list will only show records for whom the community is now responsible for the next action. If varNextAction = 1 and atBat = false, it will only show records that are for acute's action. The atbat_label and Decision_label text params use emoticons to show the symbols. The PDD_label, discharge_label, and Pathway_label Text and Color params have conditional statements that change the text and color based on record values. The edit_icon creates a new collection variable (varCurrentPatient) and adds the patient name and CHI to it. This is to collect changes for the audit. It then navigates to the edit screen. The chat_icon navigates to the URL for the Teams conversations created by the New Patient flow.
-
+- List_footer container has two dropdowns similar to the district dropdown with an identical OnChange script, but for Hospital and Ward selections.
 
 Edit Patient Form Screen:
-
+- OnVisible turns off the "spinner" control, hides any "explainer" popup, and sets the selected tab to 1 (though the latter isn't working??). It also creates a collection variable that configures all of the tabs on the screen, including the tab names, hover text, the height of the container for the fields when that tab is selected, and a variable for whether any changes have been made on that tab.
+- There are four groups of objects (cancel_confirm, spinner, delete_confirm, and explainer) that are shown/hidden based on the variables in their Visible property. The confirm_delete button is what runs the actual DeletePatientRecord flow, and is only enabled if the confirm_check box is checked.
+- Screen Container contains four primary containers:
+- Header: icon_cancel will navigate back to the list IF the user confirms, icon_delete will show the delete_confirm group, icon_export navigates to the export screen, icon1 navigates to the URL for the Teams conversations created by the New Patient flow, and icon_save which turns on the spinner while the rest of the script runs: the Patch function which saves all the changes in the varCurrentPatient collection to the first record matching the current record's CHI number (NOTE the importance of only having one record with a given CHI number, which should be the case if they're deleting patients on discharge), the SaveAudit... flow, and flows for any of the three important changes (PDD, etc.). It then turns off the spinner group and navigates to the list.
+- FormTabRow gallery: 
 
 Export Screen:
 
