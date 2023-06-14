@@ -9,14 +9,14 @@
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/ee027898-ec4d-4031-b1c1-9461e92a2eec)
 
 5. Upload the XLSX file to any SharePoint / Teams location that the application owner will have access to. This will be the location of the audit records of each change made to patient information in the app. Remember where you've put it!
-6. Upload a small logo file (100x100 pixels) to the Team hosting the app. 
+6. Upload a small logo file (100x100 pixels) to the Team hosting the app. From the details pane for the uploaded image file, copy the path to the file. DO NOT use the "get a link / share" commands! Save this to a notepad.
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/1c8ef629-6080-4868-87c4-4fe1864d868b)
 
 7. Open (edit) the app in the PowerApps Teams app, allow permissions for the connections you created, and then use the publish button to add the app to the Teams channels you created. 
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/f219d527-8a3a-4ff6-87ae-5ac2af72d2f9)
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/136d8510-ce02-423d-8e5b-f4017e91a530)
 
-8. Go into the Team and copy the channel IDs from the "get link to channel" option for the district channels (the app assumes you're using the General channel for the acute team). You only need the part of the URL that starts with "19%" and ends with "thread.tacv2". Also copy the links to the tabs where the app is published (from the drop down on the tab, click "copy link to tab")
+8. Go into the Team and copy the channel IDs from the "get link to channel" option for the district channels (the app assumes you're using the General channel for the acute team). You only need the part of the URL that starts with "19%" and ends with "thread.tacv2". Also copy the links to the tabs where the app is published (from the drop down on the tab, click "copy link to tab"). Save all of these to a notepad so that you know which IDs & links go to which channel.
 
 9. Go back into the PowerApps app for Teams, and navigate to the Districts table. Complete the Districts table with the names of the districts that map to the channels, as well as the channel IDs and links to the tabs. It should look like this. 
 ![image](https://user-images.githubusercontent.com/56914706/224298151-73bbfd37-9171-47fc-9876-c7ac5964c519.png)
