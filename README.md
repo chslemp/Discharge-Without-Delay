@@ -19,3 +19,4 @@ Export the data as a PDF for upload to an EPR
 Various notifications sent to the Teams channel for the district
 
 See [Installation Instructions](/Install.md)
+and [detailed tech documentation](/documentation.md)
