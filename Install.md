@@ -1,7 +1,7 @@
 # Installation Instructions
 
 1. Download the two .zip files
-2. In Teams, create channels for each community team district.
+2. In Teams, create channels for each community team district and for each acute team (hospital).
 3. In the PowerApps app for Teams, find the list of all components in your Dataverse for Teams environment. If you haven't yet created an app in this team, you may need to generate a new Dataverse for Teams environment first. https://learn.microsoft.com/en-us/power-apps/teams/create-first-app
 4. From the Build tab, use the Import menu or the "Import your solution" link to import the "DWDCoordination..." solution zip file. You may need to create new connections, switching back to Teams for each connection. When all connections are made, the import process will take 5-10 minutes. There may be a list of warnings in a yellow banner. These are OK.
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/d16e021d-3f61-413a-bb4d-48ba94825b2c) 
@@ -15,12 +15,12 @@
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/f219d527-8a3a-4ff6-87ae-5ac2af72d2f9)
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/136d8510-ce02-423d-8e5b-f4017e91a530)
 
-7. Go into the Team and copy the channel IDs from the "get link to channel" option for the district channels (the app assumes you're using the General channel for the acute team). You only need the part of the URL that starts with "19%" and ends with "thread.tacv2". Also copy the links to the tabs where the app is published (from the drop down on the tab, click "copy link to tab"). Save all of these to a notepad so that you know which IDs & links go to which channel.
+7. Go into the Team and copy the channel IDs from the "get link to channel" option for the district and hospital channels. You only need the part of the URL that starts with "19%" and ends with "thread.tacv2". Also copy the links to the tabs where the app is published (from the drop down on the tab, click "copy link to tab"). Save all of these to a notepad so that you know which IDs & links go to which channel.
 
-8. Go back into the PowerApps app for Teams, and navigate to the Districts table. Complete the Districts table with the names of the districts that map to the channels, as well as the channel IDs and links to the tabs. It should look like this. 
+8. Go back into the PowerApps app for Teams, and navigate to the Districts table. Complete the Districts table with the names of the districts that map to the channels, as well as the channel IDs and links to the tabs. It should look like this. Do the same for the Hospitals table. (The "Hospital Type" field in the Hospital table is not currently used in this version of the app.)
 ![image](https://user-images.githubusercontent.com/56914706/224298151-73bbfd37-9171-47fc-9876-c7ac5964c519.png)
 
-9. Edit the Hospital and Ward tables to include all the hospitals and wards that you want to include, starting with the Hospital table so that you can map the ward names to the hospital in the Ward table. (The "Hospital Type" field in the Hospital table is not currently used in this version of the app.) Your Ward table should be filled out like this:
+9. Edit Ward table to include all the hospitals and wards that you want to include. Your Ward table should be filled out like this:
 ![image](https://github.com/chslemp/Discharge-Without-Delay/assets/56914706/f5eb44fd-9c41-456b-ac90-1fb3e487dc73)
 
 10. Open the PowerAutomate portal https://make.powerautomate.com/ and switch to the environment for your Team
