@@ -3,7 +3,7 @@ A Power App designed to improve collaboration between acute and community teams 
 
 Each time the record is saved, all data is written to an audit table. When the patient is released, the patient record can be exported to PDF for upload to the EPR, and the record then archived from the app.
 
-Demo video: https://youtu.be/RysPS2_yItU 
+Demo video: https://youtu.be/m_1GWgwSOpg
 
 See [Installation Instructions](/Install.md)
 and [detailed tech documentation](/documentation.md)
